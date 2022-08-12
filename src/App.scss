@@ -1,0 +1,14 @@
+@use "./sass/" as *;
+@use "./sass/variables" as *;
+@use "./sass/mixins" as *;
+@use "./sass/breakpoints" as *;
+body {
+  margin: 0;
+  background-color: $bg-color;
+  min-width: 800px;
+  min-height: 600px;
+}
+
+* {
+  font-family: "Proxima Nova";
+}

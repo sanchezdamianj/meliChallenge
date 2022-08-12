@@ -1,38 +1,62 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@import url("https://fonts.googleapis.com/css2?family=Gentium+Book+Plus&display=swap");
+.header {
+  margin-top: 0;
+  background-color: #FFE600;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.header__container {
+  background-color: #FFE600;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1024px;
+  margin: 0 10px;
+}
+.header__input-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.header__input-container .search-button {
+  background-color: #ebebeb;
+  width: 40px;
+  height: 30px;
+  padding: 0 5px;
+  border: 0;
+}
+.header__input-container .search-icon {
+  width: 20px;
+}
+.header__input-header {
+  height: 30px;
+  border: 0;
+  padding: 0 10px;
+  width: 100%;
+}
+.header__input-header:focus {
+  outline: none;
 }
 
-.App-link {
-  color: #61dafb;
+.logo-img {
+  margin-right: 10px;
+}
+.logo-img:hover {
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-button:hover {
+  cursor: pointer;
 }
+
+body {
+  margin: 0;
+  background-color: #ebebeb;
+  min-width: 800px;
+  min-height: 600px;
+}
+
+* {
+  font-family: "Proxima Nova";
+}/*# sourceMappingURL=App.css.map */
