@@ -1,0 +1,12 @@
+@use "./mixins" as *;
+@use "./variables" as *;
+@use "./breakpoints" as *;
+
+
+.breadcrumb {
+    font-size: 12px;
+    color: $gray;
+    @include flex(center,flex-start);
+    margin: 10px 110px;
+
+}

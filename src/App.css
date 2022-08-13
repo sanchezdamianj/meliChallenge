@@ -1,33 +1,55 @@
 @import url("https://fonts.googleapis.com/css2?family=Gentium+Book+Plus&display=swap");
 .header {
   margin-top: 0;
-  background-color: #FFE600;
+  background-color: #ffdb15;
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 .header__container {
-  background-color: #FFE600;
-  height: 60px;
+  background-color: #ffdb15;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 1024px;
   margin: 0 10px;
+  padding-top: 5px;
+  padding-bottom: 7px;
 }
 .header__input-container {
   display: flex;
   align-items: center;
   width: 100%;
 }
+.header__input-container .logo {
+  margin-right: 20px;
+  margin-left: 100px;
+}
+.header__input-container .logo:hover {
+  cursor: pointer;
+}
+.header__input-container input[type=text] {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  height: 100%;
+  padding: 6px 6px 6px 35px;
+  color: #333;
+  font-size: 16px;
+  border-radius: 2px;
+  border: none;
+  width: 100%;
+}
 .header__input-container .search-button {
   background-color: #ebebeb;
-  width: 40px;
+  width: 30px;
   height: 30px;
   padding: 0 5px;
+  border-radius: 1px;
   border: 0;
+  margin-right: 100px;
 }
 .header__input-container .search-icon {
-  width: 20px;
+  width: 15px;
+  height: 15px;
 }
 .header__input-header {
   height: 30px;
@@ -39,21 +61,68 @@
   outline: none;
 }
 
-.logo-img {
-  margin-right: 10px;
-}
-.logo-img:hover {
+.search-button:hover {
   cursor: pointer;
 }
 
-.search-button:hover {
-  cursor: pointer;
+.container__card-product {
+  margin: 0px 110px 0 110px;
+  background-color: #ffffff;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0 0 0 0.1em rgba(0, 0, 0, 0.2);
+}
+.container__card-product .imageCard {
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  height: 110px;
+  width: 110px;
+  border: 1px solid red;
+  margin-left: 0;
+}
+.container__card-product .productData {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+}
+.container__card-product .productData .product__price {
+  display: flex;
+  font-size: 20px;
+  font-weight: 400;
+}
+.container__card-product .productData .product__price .iconVerif {
+  vertical-align: middle;
+  height: 16px;
+  width: 16px;
+  margin: 0 10px;
+}
+.container__card-product .productData .product__price .product__location {
+  position: absolute;
+  margin: 10px 110px 10px 110px;
+  right: 50px;
+  font-size: 10px;
+  color: #666;
+}
+.container__card-product .productData .product__description {
+  font-size: 14px;
+  color: #3f3f3f;
+}
+
+.breadcrumb {
+  font-size: 12px;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 10px 110px;
 }
 
 body {
   margin: 0;
   background-color: #ebebeb;
-  min-width: 800px;
   min-height: 600px;
 }
 
