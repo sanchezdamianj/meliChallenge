@@ -1,0 +1,70 @@
+@use "./mixins" as *;
+@use "./variables" as *;
+@use "./breakpoints" as *;
+
+.grid-detailContainer {
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+    margin: 0 110px 50px 110px;
+    border-radius: 5px;
+    & .productImgDesc {
+        display: flex;
+        flex-direction: column;
+        background-color: $bg-productCard;
+        & .detailImg{
+            height: 350px;
+            width: 350px;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+        & h3 {
+            margin: 80px 0 0 20px;
+        }
+        & .detailDescription {
+            max-width: 350px;
+            color: $gray;
+            font-size: 14px;
+            width: 90%;
+            margin-left: 20px;
+        }
+    }
+    & .productInfo{
+        background-color: $bg-productCard;
+        & .condition{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            margin: 20px 20px 0px 0;
+            color: $gray;
+            font-size: 12px;
+        }
+        & .priceDetail {
+            font-size: 34px;
+            font-weight: 400;
+        }
+        & .itemsQuantity{
+            color: $gray;
+            font-size: 12px;
+        }
+        & .titleDetail {
+            font-size: 24px;
+            font-weight: 900;
+            margin-top: 10px;
+        }
+        & .btn-purchase{
+            background-color: #3483fa;
+            box-shadow: 0 0 0 0 #fff;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+            line-height: 30px;
+            text-align: center;
+            width: 90%;
+            border-color: transparent;
+            border-radius: 6px;
+            transition: box-shadow .25s ease-out, background-color .2s ease-in-out;
+            margin-top: 40px;
+        }
+    }
+}

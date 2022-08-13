@@ -3,6 +3,7 @@ import ApiData from "../apiConfig/ApiData";
 import "../App.css";
 import BreadCrumb from "../components/BreadCrumb";
 import ListItem from "../components/ListItem";
+import Detail from "./Detail";
 
 const Home = () => {
   return (
@@ -10,6 +11,8 @@ const Home = () => {
       <BreadCrumb />
       <ListItem />
       <ApiData />
+      <BreadCrumb />
+      <Detail />
     </>
   );
 };
