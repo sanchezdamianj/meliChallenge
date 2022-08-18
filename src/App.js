@@ -1,11 +1,9 @@
-import Home from './pages/Home'
-import Header from './components/Header'
+import Routing from "./routes/Routing";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Home /> 
+      <Routing />
     </div>
   );
 }

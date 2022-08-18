@@ -1,18 +1,15 @@
 import React from "react";
-import ApiData from "../apiConfig/ApiData";
 import "../App.css";
-import BreadCrumb from "../components/BreadCrumb";
-import ListItem from "../components/ListItem";
-import Detail from "./Detail";
-
+import github from '../assets/github.png'
 const Home = () => {
+  const githubURl = "https://github.com/sanchezdamianj";
   return (
     <>
-      <BreadCrumb />
-      <ListItem />
-      <ApiData />
-      <BreadCrumb />
-      <Detail />
+      <a href={githubURl} id='copyright' >
+        <span> Creado por sanchezdamianj </span>
+        <img src={github} alt='github dev' style={{height: '16px', marginLeft: '10px'}}/>
+        
+      </a>
     </>
   );
 };

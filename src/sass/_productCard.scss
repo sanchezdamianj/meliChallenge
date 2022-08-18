@@ -9,8 +9,10 @@
   display: flex;
   flex-direction: row;
   box-shadow: 0 0 0 0.1em rgba(0, 0, 0, 0.2);
+  transition-property: box-shadow;
+  transition-duration: 0.3s ;
   &:hover {
-    box-shadow: 0 0 0 .2em rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.2);
   }
   & .imageCard {
     justify-content: flex-start;
@@ -18,6 +20,7 @@
     position: relative;
     height: 110px;
     width: 110px;
+    object-fit: cover;
 
     margin-left: 0;
   }
@@ -49,6 +52,7 @@
     & .product__description {
       font-size: 14px;
       color: $gray-over;
+      max-width: max-content;
     }
   }
 }

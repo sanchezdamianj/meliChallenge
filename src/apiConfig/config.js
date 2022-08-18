@@ -9,3 +9,5 @@ export const axiosClient = axios.create({
 export const axiosClientDetail = axios.create({
     baseURL: `${basePath}/items`
 });
+
+

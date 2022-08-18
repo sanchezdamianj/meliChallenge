@@ -1,22 +1,40 @@
-import React from "react";
-import sillas from "../assets/sillas.jpeg";
+import React, { useState } from "react";
+import Detail from "../pages/Detail";
 import check from "../assets/check.jpg";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-const ProductCard = () => {
+const ProductCard = (item ) => {
+  const [prod, setProd] = useState({item});
+  const link = `/items/${item.id}`;
+  const navigate = useNavigate()
+
+  const handleClickDetail = (item) =>{
+    setProd(item)
+    navigate(
+      { pathname: `/items/${item.id}` })
+  } 
+
+
   return (
-    <>
-      <div className="container__card-product">
-        <img src={sillas} className="imageCard" alt="ima" />
+    prod?
+   <>
+  <Link to={link} >
+      <div className="container__card-product" >
+        <img src={item.thumbnail} className="imageCard" alt="ima" onClick={handleClickDetail}/>
         <div className="productData">
           <div className="product__price">
-            $ 1.980
+            $ {item.price}
             <img src={check} className="iconVerif" alt="iconVerified" />
-            <p className="product__location">Capital Federal</p>
+            <p className="product__location">{item.address.state_name}</p>
           </div>
-          <p className="product__description">Product description</p>
+          <p className="product__description">{item.title}</p>
         </div>
       </div>
+  </Link>
     </>
+    :
+    <Detail  props={item}/>
   );
 };
 

@@ -2,12 +2,25 @@
 @use "./sass/variables" as *;
 @use "./sass/mixins" as *;
 @use "./sass/breakpoints" as *;
+
 body {
   margin: 0;
   background-color: $bg-color;
   min-height: 600px;
+
 }
 
 * {
-  font-family: "Proxima Nova";
+  font-family: proxima-nova, sans-serif;
+}
+
+.spinner {
+  @include flex(center,center);
+  margin-top: 40px;
+}
+#copyright {
+  @include flex(flex-start,flex-start);
+  font-size: 12px;
+  margin: 10px;
+  bottom: 0;
 }
